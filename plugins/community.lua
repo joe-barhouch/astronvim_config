@@ -6,15 +6,37 @@ return {
   
   -- ColorSchemes
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.colorscheme.gruvbox"},
+  -- { import = "astrocommunity.colorscheme.gruvbox"},
   { import = "astrocommunity.colorscheme.everforest"},
-  
+  -- { import = "astrocommunity.colorscheme.oxocarbon"},
+  -- { import = "astrocommunity.colorscheme.poimandres"},
+  { import = "astrocommunity.colorscheme.rose-pine"},
+
   -- Copilot
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua", enabled = true},
+  {
+    "copilot.lua",
+    opts = {
+      suggestion = {
+        keymap = {
+          accept = "<C-l>",
+          accept_word = "<C-;>",
+          accept_line = false,
+          next = "<C-.>",
+          prev = "<C-,>",
+          dismiss = "<C-/>",
+        },
+      },
+    },
+  },
+  
+  -- Top bar
+  { import = "astrocommunity.bars-and-lines.lualine-nvim", enabled = true},  
+  { import = "astrocommunity.bars-and-lines.bufferline-nvim", enabled = true},
+  { import = "astrocommunity.bars-and-lines.scope-nvim", enabled = true},
+  { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar", enabled = true},
 
-  -- Lualine
-  { import = "astrocommunity.bars-and-lines.lualine-nvim"},  
-
-  -- BufferLine
-  { import = "astrocommunity.bars-and-lines.bufferline-nvim"}
+  -- Indentation
+  -- { import = "astrocommunity.indent.indent-blankline-nvim"},
+  -- { import = "astrocommunity.indent.mini-indentscope"},
 }

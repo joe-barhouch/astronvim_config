@@ -15,6 +15,7 @@ return {
   -- event = "User AstroFile" -> loads when new file is open 
   -- lazy = false  -> :Lazy laod plugin
   -- lazy = true -> auto load
+
   -- CODI: live dev
   {
     "metakirby5/codi.vim",
@@ -22,29 +23,29 @@ return {
   },
 
   -- Tabout 
-  { "abecodes/tabout.nvim",
-    -- event = "User AstroFile",
-    lazy = false,
-    name = "tabout",
-    opts = {
-      tabKey = '<Tab>',
-      backwards_tabkey = '<S-Tab>',
-      act_as_tab = true,
-      default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
-      default_shift_tab = '<C-d>', -- reverse shift default action,
-      enable_backwards = true, -- well ...
-      completion = true, -- if the tabkey is used in a completion pum
-      tabouts = {
-        {open = "'", close = "'"},
-        {open = '"', close = '"'},
-        {open = '`', close = '`'},
-        {open = '(', close = ')'},
-        {open = '[', close = ']'},
-        {open = '{', close = '}'}
-      },
-      ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-    }
-  },  
+  -- { "abecodes/tabout.nvim",
+  --   -- event = "User AstroFile",
+  --   lazy = false,
+  --   name = "tabout",
+  --   opts = {
+  --     tabKey = '<Tab>',
+  --     backwards_tabkey = '<S-Tab>',
+  --     act_as_tab = true,
+  --     default_tab = '<C-t>', -- shift default action (only at the beginning of a line, otherwise <TAB> is used)
+  --     default_shift_tab = '<C-d>', -- reverse shift default action,
+  --     enable_backwards = true, -- well ...
+  --     completion = true, -- if the tabkey is used in a completion pum
+  --     tabouts = {
+  --       {open = "'", close = "'"},
+  --       {open = '"', close = '"'},
+  --       {open = '`', close = '`'},
+  --       {open = '(', close = ')'},
+  --       {open = '[', close = ']'},
+  --       {open = '{', close = '}'}
+  --     },
+  --     ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
+  --   }
+  -- },  
   
    -- Smooth Scroll
   {
@@ -95,6 +96,11 @@ return {
         },
       }
     }
+  },
+
+  -- Color Brackets
+  {
+    "p00f/nvim-ts-rainbow"
   },
 
   -- tmux control
