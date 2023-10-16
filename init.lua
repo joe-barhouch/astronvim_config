@@ -19,7 +19,7 @@ return {
 
   -- Set colorscheme to use
   colorscheme = "astrotheme",
-
+ 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -80,5 +80,6 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.opt.swapfile = false
   end,
 }

@@ -20,6 +20,12 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    -- zen mode
+    ["<leader>z"] = { ":ZenMode<cr>", desc = "Zen Mode" },
+  },
+  v = {
+    ["v"] = {":normal! ggVG<CR>", desc = "Select all"},
   },
   t = {
     -- setting a mapping to false will disable it
