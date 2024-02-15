@@ -6,7 +6,8 @@ return {
   
   -- ColorSchemes
   { import = "astrocommunity.colorscheme.catppuccin" },
-  -- { import = "astrocommunity.colorscheme.gruvbox"},
+  { import = "astrocommunity.colorscheme.neosolarized-nvim" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
   -- { import = "astrocommunity.colorscheme.everforest", enabled = true},
   -- { import = "astrocommunity.colorscheme.oxocarbon-nvim"},
   -- { import = "astrocommunity.colorscheme.poimandres-nvim"},
@@ -77,6 +78,18 @@ return {
 
   -- Noice
   { import = "astrocommunity.utility.noice-nvim", enabled = true},
+  {
+    "noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+        bottom_search = false,
+      }
+    }
+  },
+
+  -- Harpoon
+  {import = "astrocommunity.motion.harpoon", enabled = true},
 
   -- Smooth scroll
   {import = "astrocommunity.scrolling.vim-smoothie", enabled = true},

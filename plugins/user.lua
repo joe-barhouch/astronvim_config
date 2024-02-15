@@ -21,18 +21,18 @@ return {
     event = "User AstroFile"
   },
 
-  -- -- iron repl
+  -- -- Multi Cursor
   -- {
-  --   "Vigemus/iron.nvim",
-  --   name = "iron", 
-  --   lazy = true,
-  --   opts = {}, 
-  -- }, 
+  --   "mg979/vim-visual-multi",
+  --   event = "User AstroFile",
+  -- },
   
-  -- Multi Cursor
+  -- Solarized osaka
   {
-    "mg979/vim-visual-multi",
-    event = "User AstroFile",
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
 
   -- tmux control
